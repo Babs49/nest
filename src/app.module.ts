@@ -6,6 +6,8 @@ import { AppService } from './app.service';
 import { SorareService } from './sorare.service';
 import {AuthModule} from './auth/auth.module'
 import { UsersModule } from './users/users.module';
+import { FootballModule } from './football/football.module';
+
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
@@ -13,7 +15,8 @@ import { UsersModule } from './users/users.module';
       typePaths: ['./**/*.graphql']
     }),
     AuthModule,
-    UsersModule
+    UsersModule,
+    FootballModule
   ],
   controllers: [AppController],
   providers: [AppService, SorareService],

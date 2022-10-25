@@ -28,10 +28,11 @@ export class AppController {
     return this.sorareService.signIn(userAuthDto);
   }
 
- @Post('/authfa')
+  @Post('/authfa')
   async connectWith2FA(@Body() faDataDto: FADataDto) {
     console.log('Controller data from body ', faDataDto);
     return this.sorareService.signInWith2FA(faDataDto);
   }
 
+  
 }
